@@ -102,36 +102,39 @@ function dataHandling2() {
     console.log(input);
     var ttl = input[0,3]
     var getDate = ttl.split("/")
+    var getDate2 = ttl.split("/")
     var getMonth = parseInt(getDate[0,1])
-    var month = getMonth
-    switch(month) {
+    switch(getMonth) {
         case 1: 
-        bulan = "Januari"; break; 
+        getMonth = "Januari"; break; 
         case 2: 
-        bulan = "Februari"; break; 
+        getMonth = "Februari"; break; 
         case 3: 
-        bulan = "Maret"; break; 
+        getMonth = "Maret"; break; 
         case 4: 
-        bulan = "April"; break; 
+        getMonth = "April"; break; 
         case 5: 
-        bulan = "Mei"; break; 
+        getMonth = "Mei"; break; 
         case 6: 
-        bulan = "Juni"; break; 
+        getMonth = "Juni"; break; 
         case 7: 
-        bulan = "Juli"; break; 
+        getMonth = "Juli"; break; 
         case 8: 
-        bulan = "Agustus"; break; 
+        getMonth = "Agustus"; break; 
         case 9: 
-        bulan = "September"; break; 
+        getMonth = "September"; break; 
         case 10: 
-        bulan = "Oktober"; break;
+        getMonth = "Oktober"; break;
         case 11: 
-        bulan = "November"; break; 
+        getMonth = "November"; break; 
         case 12: 
-        bulan = "Desember";
+        getMonth = "Desember";
     }
-    console.log(month);
-
+    console.log(getMonth)
+    var dateSort = getDate.sort(function(a, b){return b-a});
+    console.log(dateSort);
+    var joinDate = getDate2.join('-')
+    console.log(joinDate);
 }
 
 dataHandling2(input)
